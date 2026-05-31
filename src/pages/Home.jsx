@@ -2,7 +2,7 @@ import Hero from '../components/Hero/Hero';
 import Features from '../components/Features/Features';
 import Showcase from '../components/Showcase/Showcase';
 import HowItWorks from '../components/HowItWorks/HowItWorks';
-import Plans from '../components/Plans/Plans';
+import Listings from '../components/Listings/Listings';
 import Testimonials from '../components/Testimonials/Testimonials';
 import CTA from '../components/CTA/CTA';
 import Footer from '../components/Footer/Footer';
@@ -15,7 +15,7 @@ export default function Home() {
       <Features />
       <Showcase />
       <HowItWorks />
-      <Plans />
+      <Listings />
       <Testimonials />
       <CTA onOpenChat={openChatWidget} />
       <Footer />

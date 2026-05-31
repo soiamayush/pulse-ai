@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
-import { MessageCircle, Cpu, Users, Sparkles } from 'lucide-react';
+import { MessageCircle, Clock, Users, Sparkles } from 'lucide-react';
 import Header from '../Header/Header';
 import { statsData } from '../../data/siteData';
+import { BRAND } from '../../data/brand';
 import './Hero.css';
 
 const transition = { type: 'spring', duration: 3 };
@@ -23,7 +24,7 @@ export default function Hero() {
             transition={{ ...transition, delay: 0.2 }}
           >
             <div />
-            <span>Powered by FastAPI & LangChain</span>
+            <span>{BRAND.tagline}</span>
           </motion.div>
 
           <div className="hero-text">
@@ -32,21 +33,21 @@ export default function Hero() {
               animate={isMobile ? { opacity: 1, y: 0 } : { left: '0' }}
               transition={{ ...transition, delay: 0.4 }}
             >
-              Capture
+              Find Your
             </motion.div>
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ ...transition, delay: 0.6 }}
             >
-              Every <span className="stroke-text">Lead</span>
+              Dream <span className="stroke-text">Home</span>
             </motion.div>
             <motion.div
               initial={isMobile ? { opacity: 0, y: 20 } : { left: '200%' }}
               animate={isMobile ? { opacity: 1, y: 0 } : { left: '0' }}
               transition={{ ...transition, delay: 0.8 }}
             >
-              With AI That Never Sleeps
+              With Expert Guidance
             </motion.div>
             <motion.div
               className="hero-subtitle"
@@ -54,8 +55,8 @@ export default function Hero() {
               animate={isMobile ? { opacity: 1, y: 0 } : { left: '0' }}
               transition={{ ...transition, delay: 1 }}
             >
-              Deploy an intelligent chatbot that qualifies visitors, answers questions, and
-              converts conversations into qualified leads — automatically.
+              Luxury homes, family residences, and investment properties across 12 cities.
+              Chat with our assistant anytime — we capture your inquiry and match you with the right agent.
             </motion.div>
           </div>
 
@@ -79,11 +80,11 @@ export default function Hero() {
             animate={isMobile ? { opacity: 1, y: 0 } : { left: '0' }}
             transition={{ ...transition, delay: 1.4 }}
           >
-            <Link to="plans" spy smooth offset={-80} className="btn btn-primary">
-              Get Started
+            <Link to="listings" spy smooth offset={-80} className="btn btn-primary">
+              View Listings
             </Link>
-            <Link to="how-it-works" spy smooth offset={-80} className="btn btn-outline">
-              See How It Works
+            <Link to="features" spy smooth offset={-80} className="btn btn-outline">
+              Explore Properties
             </Link>
           </motion.div>
         </div>
@@ -99,25 +100,25 @@ export default function Hero() {
               <div className="preview-dots">
                 <span /><span /><span />
               </div>
-              <span>PulseAI Chat</span>
+              <span>{BRAND.assistantName}</span>
               <span className="preview-badge">Live</span>
             </div>
             <div className="preview-messages">
               <div className="preview-msg bot">
                 <Sparkles size={14} />
-                Hey! I'm Pulse. How can I help you today?
+                Welcome! Looking to buy, rent, or schedule a viewing?
               </div>
-              <div className="preview-msg user">I'd like to see a demo</div>
+              <div className="preview-msg user">I want to buy a home in Austin</div>
               <div className="preview-msg bot">
                 <Sparkles size={14} />
-                Perfect! Let me capture your details to set that up...
+                Great choice! Let me connect you with an agent...
               </div>
               <div className="preview-typing">
                 <span /><span /><span />
               </div>
             </div>
             <div className="preview-input">
-              <span>Type a message...</span>
+              <span>Your name...</span>
               <MessageCircle size={18} color="#ff9f2e" />
             </div>
           </motion.div>
@@ -128,10 +129,10 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2 }}
           >
-            <Cpu size={24} color="#ff9f2e" />
+            <Clock size={24} color="#ff9f2e" />
             <div>
               <span>Response Time</span>
-              <span>1.8s avg</span>
+              <span>Under 2 min</span>
             </div>
           </motion.div>
 
@@ -143,8 +144,8 @@ export default function Hero() {
           >
             <Users size={24} color="#ff9f2e" />
             <div>
-              <span>Leads Today</span>
-              <span>+47</span>
+              <span>Inquiries Today</span>
+              <span>+23</span>
             </div>
           </motion.div>
         </div>

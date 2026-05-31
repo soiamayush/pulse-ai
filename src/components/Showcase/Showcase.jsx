@@ -4,10 +4,10 @@ import { images } from '../../data/images';
 import './Showcase.css';
 
 const points = [
-  'Real-time AI conversations that feel human',
-  'Automatic lead scoring & CRM sync',
-  'Custom LangChain prompts for your brand voice',
-  'Deploy in minutes with a single script tag',
+  'Browse 200+ active listings with photos & virtual tours',
+  'Chat with our AI assistant — no forms, just conversation',
+  'Get matched with a local agent within 24 hours',
+  'Buy, rent, or invest — we handle the full journey',
 ];
 
 export default function Showcase() {
@@ -19,8 +19,8 @@ export default function Showcase() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
       >
-        <img src={images.showcase} alt="Team collaborating with AI chatbot" loading="lazy" />
-        <div className="showcase-image-badge">AI-Powered</div>
+        <img src={images.showcase} alt="Modern luxury home exterior" loading="lazy" />
+        <div className="showcase-image-badge">Featured Property</div>
       </motion.div>
 
       <motion.div
@@ -29,15 +29,15 @@ export default function Showcase() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
       >
-        <span className="showcase-label">The Smart Way</span>
+        <span className="showcase-label">Your Next Chapter</span>
         <h2>
-          Turn Visitors Into
+          More Than
           <br />
-          <span className="stroke-text">Qualified Leads</span>
+          <span className="stroke-text">A Home</span>
         </h2>
         <p>
-          Stop losing prospects to static contact forms. PulseAI engages every visitor with
-          intelligent, context-aware conversations — then routes hot leads straight to your team.
+          Skyline Estates pairs premium properties with smart lead capture — so every visitor
+          who asks a question becomes a qualified inquiry on your agent dashboard.
         </p>
         <ul className="showcase-list">
           {points.map((point) => (

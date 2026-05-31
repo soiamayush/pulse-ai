@@ -1,17 +1,12 @@
-# PulseAI — Lead Capture AI Chatbot (Frontend Showcase)
+# Skyline Estates — Real Estate Lead Capture Demo
 
-A stunning frontend demo for a **FastAPI + LangChain lead capture chatbot** gig. UI inspired by the [FitClub gym website](https://gym-site-project.pages.dev/) — dark theme, orange accents, framer-motion animations, and bold typography.
+A **real estate website** with an embedded AI chat assistant that captures property inquiries and routes them to an agent dashboard. Built as a frontend showcase for a FastAPI + LangChain lead capture gig.
 
-> **Frontend only** — no backend required. Chat responses are simulated; captured leads are stored in `localStorage` for demo purposes.
+## Concept
 
-## Features
+This is **not** a chatbot SaaS pitch — it's a real business site (**Skyline Estates**) where visitors browse listings, chat with a property assistant, and leave their details. Agents view all inquiries on the **Property Inquiries** dashboard.
 
-- **Landing page** — Hero, features, how-it-works, pricing, testimonials, CTA
-- **AI chat widget** — Floating chatbot with typing indicators, quick replies, and conversational lead capture (name → email → company)
-- **Leads dashboard** — View captured leads with intent scoring and status management
-- **Gym-inspired design** — Dark `#3c3f45` background, `#f48915` orange accents, gradient cards, blur effects, stroke text
-
-## Quick Start
+## Run locally
 
 ```powershell
 cd D:\programming\fiverr\fiverr_proj_show\pulse-ai-lead-capture
@@ -19,37 +14,25 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173)
+- `/` — Real estate landing page + chat widget
+- `/dashboard` — Agent leads dashboard
 
-## Routes
+## Chat flow
 
-| Route | Description |
-|-------|-------------|
-| `/` | Landing page with live chat widget |
-| `/dashboard` | Leads captured from the chatbot |
+1. Visitor opens chat on the property site
+2. Selects intent: **Buy a home** · **Rent property** · **Schedule viewing**
+3. Assistant collects **name → email → location**
+4. Inquiry saved to dashboard with intent score
 
-## Tech Stack
-
-- React 18 + Vite
-- Framer Motion (animations)
-- React Router DOM
-- React Scroll (smooth nav)
-- Lucide React (icons)
-
-## For Fiverr Gig
-
-This project showcases the **frontend/UI layer** of a lead capture AI chatbot built with FastAPI & LangChain. The chat widget demonstrates:
-
-1. Natural conversational flow
-2. Intent detection (demo, pricing, sales)
-3. Lead data collection through chat
-4. Lead scoring and dashboard
-
-Connect to a real FastAPI + LangChain backend by replacing the mock chat logic in `src/data/chatFlow.js` and `src/components/ChatWidget/ChatWidget.jsx` with API calls.
-
-## Build
+## Fiverr screenshots
 
 ```powershell
-npm run build
-npm run preview
+npm run dev
+python capture_screenshots.py
 ```
+
+Outputs 5 images (1024×768) to `assets/screenshots/`.
+
+## Stack
+
+React + Vite · Framer Motion · React Router · localStorage (demo)

@@ -1,21 +1,28 @@
-/** Remote images (Unsplash) — used for demo/showcase UI */
+/** Remote images (Unsplash) — real estate themed */
 export const images = {
   showcase:
-    'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=900&h=600',
+    'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&h=600',
   dashboard:
-    'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&h=600',
+    'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&h=600',
   ctaBg:
-    'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&h=400',
+    'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&h=400',
 };
 
 export const featureImages = {
-  brain: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600&h=340',
-  zap: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&h=340',
-  target: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&h=340',
-  message: 'https://images.unsplash.com/photo-1577563908411-5077b6dc7624?auto=format&fit=crop&w=600&h=340',
-  database: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&h=340',
-  shield: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&h=340',
+  home: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&h=340',
+  map: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=600&h=340',
+  key: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&h=340',
+  headphones: 'https://images.unsplash.com/photo-1577563908411-5077b6dc7624?auto=format&fit=crop&w=600&h=340',
+  building: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&h=340',
+  shield: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=600&h=340',
 };
+
+export const stepImages = [
+  'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&h=260',
+  'https://images.unsplash.com/photo-1577563908411-5077b6dc7624?auto=format&fit=crop&w=400&h=260',
+  'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=400&h=260',
+  'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=400&h=260',
+];
 
 export const testimonialAvatars = {
   sarah:
@@ -25,10 +32,3 @@ export const testimonialAvatars = {
   emily:
     'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=560&h=640&crop=faces&q=90',
 };
-
-export const stepImages = [
-  'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&h=260',
-  'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=400&h=260',
-  'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=400&h=260',
-  'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=400&h=260',
-];

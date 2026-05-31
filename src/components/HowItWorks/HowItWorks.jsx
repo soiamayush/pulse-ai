@@ -7,17 +7,17 @@ export default function HowItWorks() {
   return (
     <section className="how-container" id="how-it-works">
       <div className="section-heading">
-        <span>Simple Setup</span>
+        <span>Simple Process</span>
         <div>
           How It <span className="stroke-text">Works</span>
         </div>
-        <span>From zero to capturing leads in under 10 minutes. No complex configuration required.</span>
+        <span>From browsing to closing — with AI-powered lead capture at every step.</span>
       </div>
 
       <div className="how-banner">
-        <img src={images.dashboard} alt="Analytics dashboard preview" loading="lazy" />
+        <img src={images.dashboard} alt="Agent reviewing property inquiries" loading="lazy" />
         <div className="how-banner-overlay">
-          <span>Live Dashboard Preview</span>
+          <span>Agent Dashboard — Every Inquiry Tracked</span>
         </div>
       </div>
 
@@ -39,18 +39,6 @@ export default function HowItWorks() {
             </div>
           </motion.div>
         ))}
-      </div>
-
-      <div className="tech-stack">
-        <span>Tech Stack</span>
-        <div className="tech-badges">
-          <span className="tech-badge">FastAPI</span>
-          <span className="tech-badge">LangChain</span>
-          <span className="tech-badge">OpenAI</span>
-          <span className="tech-badge">WebSockets</span>
-          <span className="tech-badge">PostgreSQL</span>
-          <span className="tech-badge">Redis</span>
-        </div>
       </div>
 
       <div className="blur how-blur" />

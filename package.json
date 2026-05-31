@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "PulseAI — Frontend showcase for FastAPI + LangChain lead capture chatbot",
+  "description": "Skyline Estates — Real estate site with AI lead capture chatbot (frontend demo)",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

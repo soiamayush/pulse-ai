@@ -1,20 +1,27 @@
 import { motion } from 'framer-motion';
-import { Brain, Zap, Target, MessageCircle, Database, Shield } from 'lucide-react';
+import { Home, MapPin, Key, Headphones, Building2, ShieldCheck } from 'lucide-react';
 import { featuresData } from '../../data/siteData';
 import { featureImages } from '../../data/images';
 import './Features.css';
 
-const iconMap = { brain: Brain, zap: Zap, target: Target, message: MessageCircle, database: Database, shield: Shield };
+const iconMap = {
+  home: Home,
+  map: MapPin,
+  key: Key,
+  headphones: Headphones,
+  building: Building2,
+  shield: ShieldCheck,
+};
 
 export default function Features() {
   return (
     <section className="features-container" id="features">
       <div className="section-heading">
-        <span>Why PulseAI</span>
+        <span>Why Skyline Estates</span>
         <div>
-          Built For <span className="stroke-text">Growth</span>
+          Properties Built For <span className="stroke-text">Living</span>
         </div>
-        <span>Enterprise-grade AI infrastructure wrapped in a beautiful, conversion-optimized chat experience.</span>
+        <span>From first-time buyers to seasoned investors — we make finding the right home simple.</span>
       </div>
 
       <div className="features-grid">

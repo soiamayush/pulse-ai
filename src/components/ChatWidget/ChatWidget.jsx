@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, X, Send, Sparkles, Bot } from 'lucide-react';
+import { MessageCircle, X, Send, Sparkles, Building2 } from 'lucide-react';
 import { useLeads } from '../../context/LeadsContext';
+import { BRAND } from '../../data/brand';
 import {
   BOT_MESSAGES,
   LEAD_STAGES,
@@ -101,13 +102,13 @@ export default function ChatWidget() {
           return;
         }
         setLeadData((prev) => ({ ...prev, email: text }));
-        addBotMessage(BOT_MESSAGES.askCompany, 900);
-        setStage(LEAD_STAGES.COMPANY);
+        addBotMessage(BOT_MESSAGES.askLocation, 900);
+        setStage(LEAD_STAGES.LOCATION);
         break;
       }
-      case LEAD_STAGES.COMPANY: {
-        const company = text.toLowerCase() === 'skip' ? '' : text;
-        const finalData = { ...leadData, company };
+      case LEAD_STAGES.LOCATION: {
+        const location = text.toLowerCase() === 'skip' ? '' : text;
+        const finalData = { ...leadData, location };
         setLeadData(finalData);
         saveLead(finalData);
         addBotMessage(BOT_MESSAGES.complete(finalData.name), 1000);
@@ -115,7 +116,7 @@ export default function ChatWidget() {
         break;
       }
       default:
-        addBotMessage("Thanks for reaching out! Feel free to ask about our features, pricing, or request a demo.", 800);
+        addBotMessage(BOT_MESSAGES.fallback, 800);
     }
   };
 
@@ -125,6 +126,15 @@ export default function ChatWidget() {
     setLeadData({ intent: 'default' });
     setTimeout(initChat, 100);
   };
+
+  const placeholder =
+    stage === LEAD_STAGES.NAME
+      ? 'Your name...'
+      : stage === LEAD_STAGES.EMAIL
+        ? 'your@email.com'
+        : stage === LEAD_STAGES.LOCATION
+          ? 'City or neighborhood (or skip)'
+          : 'Type a message...';
 
   return (
     <>
@@ -140,12 +150,12 @@ export default function ChatWidget() {
             <div className="chat-header">
               <div className="chat-header-info">
                 <div className="chat-avatar">
-                  <Bot size={20} color="white" />
+                  <Building2 size={20} color="white" />
                 </div>
                 <div>
-                  <strong>Pulse AI</strong>
+                  <strong>{BRAND.assistantName}</strong>
                   <span>
-                    <span className="online-dot" /> LangChain Agent
+                    <span className="online-dot" /> {BRAND.assistantRole}
                   </span>
                 </div>
               </div>
@@ -191,25 +201,13 @@ export default function ChatWidget() {
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder={
-                  stage === LEAD_STAGES.NAME
-                    ? 'Your name...'
-                    : stage === LEAD_STAGES.EMAIL
-                      ? 'your@email.com'
-                      : stage === LEAD_STAGES.COMPANY
-                        ? 'Company name (or skip)'
-                        : 'Type a message...'
-                }
+                placeholder={placeholder}
                 disabled={stage === LEAD_STAGES.COMPLETE}
               />
               <button type="submit" disabled={!input.trim() || stage === LEAD_STAGES.COMPLETE}>
                 <Send size={18} />
               </button>
             </form>
-
-            <div className="chat-powered">
-              Powered by <strong>FastAPI</strong> + <strong>LangChain</strong>
-            </div>
           </motion.div>
         )}
       </AnimatePresence>

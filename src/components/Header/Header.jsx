@@ -1,14 +1,15 @@
 import { useState } from 'react';
 import { Link } from 'react-scroll';
 import { Link as RouterLink } from 'react-router-dom';
-import { Menu, X, Bot } from 'lucide-react';
+import { Menu, X, Building2 } from 'lucide-react';
+import { BRAND } from '../../data/brand';
 import './Header.css';
 
 const navLinks = [
   { to: 'home', label: 'Home' },
-  { to: 'features', label: 'Features' },
+  { to: 'features', label: 'Properties' },
   { to: 'how-it-works', label: 'How It Works' },
-  { to: 'plans', label: 'Pricing' },
+  { to: 'listings', label: 'Listings' },
   { to: 'testimonials', label: 'Reviews' },
 ];
 
@@ -19,9 +20,10 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header-logo">
-        <Bot size={28} color="#f48915" strokeWidth={2.5} />
+        <Building2 size={28} color="#f48915" strokeWidth={2.5} />
         <span>
-          Pulse<span className="logo-accent">AI</span>
+          {BRAND.name}{' '}
+          <span className="logo-accent">{BRAND.suffix}</span>
         </span>
       </div>
 
@@ -45,7 +47,7 @@ export default function Header() {
             </Link>
           ))}
           <RouterLink to="/dashboard" className="header-dashboard" onClick={() => setMenuOpen(false)}>
-            Dashboard
+            Leads
           </RouterLink>
           {isMobile && (
             <button className="menu-btn" onClick={() => setMenuOpen(false)} aria-label="Close menu">

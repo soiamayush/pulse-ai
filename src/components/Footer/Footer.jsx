@@ -1,5 +1,6 @@
-import { Bot } from 'lucide-react';
+import { Building2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { BRAND } from '../../data/brand';
 import './Footer.css';
 
 export default function Footer() {
@@ -7,21 +8,22 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-top">
         <div className="footer-brand">
-          <Bot size={24} color="#f48915" />
+          <Building2 size={24} color="#f48915" />
           <span>
-            Pulse<span className="logo-accent">AI</span>
+            {BRAND.name}{' '}
+            <span className="logo-accent">{BRAND.suffix}</span>
           </span>
         </div>
-        <p>Intelligent lead capture powered by FastAPI & LangChain.</p>
+        <p>Premium real estate across 12 cities. Buy, rent, or invest with expert agents.</p>
       </div>
       <div className="footer-links">
-        <Link to="/dashboard">Leads Dashboard</Link>
-        <a href="#features">Features</a>
-        <a href="#plans">Pricing</a>
+        <Link to="/dashboard">Agent Leads</Link>
+        <a href="#features">Properties</a>
+        <a href="#listings">Listings</a>
         <a href="#contact">Contact</a>
       </div>
       <div className="footer-bottom">
-        <span>&copy; {new Date().getFullYear()} PulseAI. Frontend showcase demo.</span>
+        <span>&copy; {new Date().getFullYear()} {BRAND.name} {BRAND.suffix}. All rights reserved.</span>
       </div>
     </footer>
   );

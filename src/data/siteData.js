@@ -1,123 +1,109 @@
+import { testimonialAvatars } from './images';
+
 export const featuresData = [
   {
-    icon: 'brain',
-    title: 'LangChain AI Engine',
-    desc: 'Multi-step reasoning chains that understand intent, qualify leads, and respond naturally.',
+    icon: 'home',
+    title: 'Premium Listings',
+    desc: 'Hand-picked homes, penthouses, and estates — updated daily with virtual tours and floor plans.',
   },
   {
-    icon: 'zap',
-    title: 'FastAPI Backend',
-    desc: 'Lightning-fast async API endpoints with real-time streaming chat responses.',
+    icon: 'map',
+    title: '12 City Locations',
+    desc: 'From downtown lofts to suburban family homes across major metros in the US and Canada.',
   },
   {
-    icon: 'target',
-    title: 'Smart Lead Scoring',
-    desc: 'Automatically scores and tags leads based on conversation signals and buyer intent.',
+    icon: 'key',
+    title: 'Buy · Rent · Invest',
+    desc: 'Whether you are a first-time buyer or seasoned investor, we match you with the right property.',
   },
   {
-    icon: 'message',
-    title: '24/7 Engagement',
-    desc: 'Never miss a lead — your AI assistant works around the clock on every page.',
+    icon: 'headphones',
+    title: '24/7 AI Assistant',
+    desc: 'Our chat assistant answers questions instantly and captures your inquiry — even at midnight.',
   },
   {
-    icon: 'database',
-    title: 'CRM Integration Ready',
-    desc: 'Export leads to HubSpot, Salesforce, or any webhook endpoint instantly.',
+    icon: 'building',
+    title: 'Expert Agents',
+    desc: '150+ licensed agents with deep local knowledge. Every lead goes straight to the right specialist.',
   },
   {
     icon: 'shield',
-    title: 'Enterprise Security',
-    desc: 'End-to-end encryption, GDPR compliant data handling, and role-based access.',
+    title: 'Trusted Since 2018',
+    desc: '850+ families helped. Transparent process, zero hidden fees, and full support until closing.',
   },
 ];
 
 export const stepsData = [
   {
     num: '01',
-    title: 'Embed Widget',
-    desc: 'Drop a single script tag on your site. The chat widget loads in under 200ms.',
+    title: 'Browse Properties',
+    desc: 'Explore featured listings with photos, pricing, and neighborhood insights on our site.',
   },
   {
     num: '02',
-    title: 'AI Converses',
-    desc: 'LangChain-powered agent greets visitors, answers questions, and builds rapport.',
+    title: 'Chat With Us',
+    desc: 'Ask our AI assistant anything — budget, location, timeline. No forms, just conversation.',
   },
   {
     num: '03',
-    title: 'Capture Leads',
-    desc: 'Collects name, email, and intent through natural conversation — not boring forms.',
+    title: 'Get Matched',
+    desc: 'We capture your details and route you to an agent with listings tailored to your needs.',
   },
   {
     num: '04',
-    title: 'Sync & Close',
-    desc: 'Leads flow to your dashboard and CRM. Your team follows up while interest is hot.',
+    title: 'Close Your Deal',
+    desc: 'Schedule viewings, make offers, and move in. Your agent stays with you every step.',
   },
 ];
 
-export const plansData = [
+export const listingsData = [
   {
-    name: 'Starter',
-    price: '49',
-    period: '/mo',
-    features: ['1 chatbot', '500 conversations/mo', 'Basic lead capture', 'Email notifications'],
+    name: 'Downtown Loft',
+    price: '485',
+    period: 'K',
+    features: ['2 bed · 2 bath', '1,200 sq ft', 'City views', 'Parking included'],
     highlighted: false,
   },
   {
-    name: 'Growth',
-    price: '149',
-    period: '/mo',
-    features: [
-      '3 chatbots',
-      '5,000 conversations/mo',
-      'LangChain custom prompts',
-      'CRM webhooks',
-      'Lead scoring',
-      'Analytics dashboard',
-    ],
+    name: 'Family Residence',
+    price: '620',
+    period: 'K',
+    features: ['4 bed · 3 bath', '2,400 sq ft', 'Top school district', 'Large backyard'],
     highlighted: true,
   },
   {
-    name: 'Enterprise',
-    price: 'Custom',
-    period: '',
-    features: [
-      'Unlimited chatbots',
-      'Unlimited conversations',
-      'Dedicated FastAPI instance',
-      'Custom AI training',
-      'SLA & priority support',
-      'White-label option',
-    ],
+    name: 'Luxury Penthouse',
+    price: '1.2',
+    period: 'M',
+    features: ['3 bed · 3 bath', '3,100 sq ft', 'Rooftop terrace', 'Concierge building'],
     highlighted: false,
   },
 ];
-
-import { testimonialAvatars } from './images';
 
 export const testimonialsData = [
   {
     name: 'Sarah Chen',
-    role: 'VP Marketing, TechFlow',
-    text: 'PulseAI tripled our inbound leads in the first month. The conversational flow feels genuinely human.',
+    role: 'Home Buyer, Austin TX',
+    text: 'I found my dream home in two weeks. The chat assistant answered my questions at 11pm and an agent called me the next morning with perfect matches.',
     avatar: testimonialAvatars.sarah,
   },
   {
     name: 'Marcus Rivera',
-    role: 'Founder, ScaleUp SaaS',
-    text: 'We replaced three form pages with one chat widget. Conversion rate jumped from 2% to 11%.',
+    role: 'First-Time Buyer, Denver CO',
+    text: 'No more endless contact forms. I told the chatbot what I wanted and had three viewings booked by Friday. Smooth from start to finish.',
     avatar: testimonialAvatars.marcus,
   },
   {
     name: 'Emily Watson',
-    role: 'Sales Director, CloudBase',
-    text: 'The LangChain integration lets us customize exactly how the bot qualifies enterprise leads.',
+    role: 'Investor, Miami FL',
+    text: 'Skyline helped me close on two rental properties. The team understood my ROI goals and only sent listings that made sense.',
     avatar: testimonialAvatars.emily,
   },
 ];
 
 export const statsData = [
-  { value: '3.2x', label: 'More Leads' },
-  { value: '89%', label: 'Response Rate' },
-  { value: '24/7', label: 'Availability' },
-  { value: '<2s', label: 'Avg Response' },
+  { value: '850+', label: 'Homes Sold' },
+  { value: '12', label: 'Cities' },
+  { value: '24/7', label: 'AI Support' },
+  { value: '4.9★', label: 'Client Rating' },
 ];

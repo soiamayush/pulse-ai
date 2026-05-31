@@ -2,7 +2,7 @@ import { createContext, useContext, useState, useEffect, useCallback } from 'rea
 import { scoreLead } from '../data/chatFlow';
 
 const LeadsContext = createContext(null);
-const STORAGE_KEY = 'pulseai_leads';
+const STORAGE_KEY = 'skyline_leads';
 
 export function LeadsProvider({ children }) {
   const [leads, setLeads] = useState([]);
@@ -20,7 +20,7 @@ export function LeadsProvider({ children }) {
     const lead = {
       id: crypto.randomUUID(),
       ...leadData,
-      score: scoreLead(leadData.intent, leadData.company),
+      score: scoreLead(leadData.intent, leadData.location),
       createdAt: new Date().toISOString(),
       status: 'new',
     };
